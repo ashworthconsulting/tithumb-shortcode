@@ -26,7 +26,7 @@ function timthumb_shortcode( $atts, $content = null ) {
     }else{
         $protocol = 'https://';
     }
-    $path = $protocol . $_SERVER['HTTP_HOST'] . '/wp-content/themes/escalation';
+    $path = $protocol . $_SERVER['HTTP_HOST'] . get_template_directory_uri();
 
     $ext = strtolower(pathinfo(trim($content), PATHINFO_EXTENSION));
 
